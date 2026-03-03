@@ -323,7 +323,7 @@ class DoujinDesu :
 
         val finalUrl = if (query.isNotBlank()) "$baseUrlWithPage?s=${query.replace(" ", "+")}" else baseUrlWithPage
 
-        /* Will be used later if DoujinDesu aleardy fix their problem
+         Will be used later if DoujinDesu aleardy fix their problem
         (if (filters.isEmpty()) getFilterList() else filters).forEach { filter ->
             when (filter) {
                 is CategoryNames -> {
@@ -351,7 +351,7 @@ class DoujinDesu :
                 else -> {}
             }
         }
-         */
+         
 
         val agsFilter = filters.firstInstanceOrNull<AuthorGroupSeriesFilter>()
         val agsValueFilter = filters.firstInstanceOrNull<AuthorGroupSeriesValueFilter>()
@@ -390,14 +390,14 @@ class DoujinDesu :
         AuthorGroupSeriesFilter(authorGroupSeriesOptions),
         AuthorGroupSeriesValueFilter(),
         Filter.Separator(),
-        /* Will be used later if DoujinDesu aleardy fix their problem
+
         Filter.Header("NB: Untuk Character Filter akan mengambil hasil apapun jika diinput, misal 'alice', maka hasil akan memunculkan semua Karakter yang memiliki nama 'Alice', bisa digabungkan dengan filter lainnya"),
         CharacterFilter(),
         StatusList(statusList),
         CategoryNames(categoryNames),
         OrderBy(orderBy),
         GenreList(genreList()),
-         */
+         
     )
 
     // Detail Parse
